@@ -1,0 +1,276 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CGPA Calculator</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <link rel="icon" href="images/calculator.png">
+</head>
+
+<body>
+    <div class="container">
+        <div class="card" style="margin: 50px;">
+            <div class="card-body">
+                <div align="center" style="padding: 10px;">
+                    <img src="images/calculator.png" width="50px" style="padding: 10px;" />
+                    <h4>CGPA Calculator</h4>
+                </div>
+
+                <div id="result" class="row">
+                    <div class="col-sm-12">
+                        <div align="center">
+                            <button class="btn btn-danger btn-block">Result</button>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="est_gpa">Estimated GPA:</label>
+                            <input type="text" class="form-control" id="est_gpa">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="est_cgpa">Estimated CGPA:</label>
+                            <input type="text" class="form-control" id="est_cgpa">
+                        </div>
+                    </div>
+                </div>
+<!---number of semester -->
+                <div id="completed_semesterr" class="row">
+                    <div class="col-sm-12">
+                        <div align="center">
+                            <button class="btn btn-success btn-block">Enter the number of semester you completed</button>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="form-group">
+                            <label for="completed_semester">Number of semesters you completed:</label>
+                            <input type="text" class="form-control" id="completed_semester">
+                        </div>
+                    </div>
+                  
+                </div>
+ <!--end semester-->
+
+                <div id="current_semester" class="row">
+                    <div class="col-sm-12">
+                        <div align="center">
+                            <button class="btn btn-success btn-block">Current Semester Information</button>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+<!-- semester 01 -->
+                <div id="semstr01" class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label for="semstr01_courses">Course Taken in Semester:<span id="semester_number"></span></label>
+                            <select class="form-control" id="semstr01_courses">
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+<!-- semester 01 end -->
+
+<!-- Course 01-->
+                <div id="course_1" class="row">
+                    <div class="col-sm-12">
+                        <h5>Course 1</h5>
+                        <hr>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="form-group">
+                            <label for="Course Code1">Course Code</label>
+                            <input type="text" class="form-control" id="Course Code1">
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="form-group">
+                            <label for="credit_completed">Credit:</label>
+                            <input type="text" class="form-control" id="course01_credit_1">
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="form-group">
+                            <label for="gpa_01">GPA:</label>
+                            <input type="text" class="form-control" id="gpa_01">
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="form-group">
+                            <label for="course1_grade1">Grade</label>
+                            <input type="text" class="form-control" id="course1_grade1" placeholder=" use upper case">
+                        </div>
+                    </div>        
+                </div>
+<!-- Course 01 END-->
+
+<!-- Course 02-->
+                <div id="course_2" class="row">
+                    <div class="col-sm-12">
+                        <h5>Course 2</h5>
+                        <hr>
+                      
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="form-group">
+                            <label for="Course Code2">Course Code</label>
+                            <input type="text" class="form-control" id="Course Code2">
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="form-group">
+                            <label for="credit_completed">Credit:</label>
+                            <input type="text" class="form-control" id="course01_credit_2">
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="form-group">
+                            <label for="gpa_02">GPA:</label>
+                            <input type="text" class="form-control" id="gpa_02">
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="form-group">
+                            <label for="course1_grade2">Grade</label>
+                            <input type="text" class="form-control" id="course1_grade2" placeholder=" use upper case">
+                        </div>
+                    </div>    
+                   
+                </div>
+<!-- Course 02 END-->
+
+<!-- Course 03-->
+                <div id="course_3" class="row">
+                    <div class="col-sm-12">
+                        <h5>Course 3</h5>
+                        <hr>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="form-group">
+                            <label for="Course Code3">Course Code</label>
+                            <input type="text" class="form-control" id="Course Code3">
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="form-group">
+                            <label for="credit_completed">Credit:</label>
+                            <input type="text" class="form-control" id="course01_credit_3">
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="form-group">
+                            <label for="gpa_03">GPA:</label>
+                            <input type="text" class="form-control" id="gpa_03">
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="form-group">
+                            <label for="course1_grade3">Grade</label>
+                            <input type="text" class="form-control" id="course1_grade3" placeholder=" use upper case">
+                        </div>
+                    </div>        
+                </div>
+<!-- Course 03 END-->
+
+<!-- Course 04-->
+                <div id="course_4" class="row">
+                    <div class="col-sm-12">
+                        <h5>Course 4</h5>
+                        <hr>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="form-group">
+                            <label for="credit_completed">Credit:</label>
+                            <input type="text" class="form-control" id="credit_completed_4">
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="form-group">
+                            <label for="current_cgpa">GPA:</label>
+                            <input type="text" class="form-control" id="current_cgpa_4">
+                        </div>
+                    </div>
+                </div>
+<!-- Course 04 END-->
+
+<!-- Course 05-->
+                <div id="course_5" class="row">
+                    <div class="col-sm-12">
+                        <h5>Course 5</h5>
+                        <hr>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="form-group">
+                            <label for="credit_completed">Credit:</label>
+                            <input type="text" class="form-control" id="credit_completed_5">
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="form-group">
+                            <label for="current_cgpa">GPA:</label>
+                            <input type="text" class="form-control" id="current_cgpa_5">
+                        </div>
+                    </div>
+                </div>
+<!-- Course 05 END-->
+
+<!-- Course 06-->
+                <div id="course_6" class="row">
+                    <div class="col-sm-12">
+                        <h5>Course 6</h5>
+                        <hr>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="form-group">
+                            <label for="credit_completed">Credit:</label>
+                            <input type="text" class="form-control" id="credit_completed_6">
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="form-group">
+                            <label for="current_cgpa">GPA:</label>
+                            <input type="text" class="form-control" id="current_cgpa_6">
+                        </div>
+                    </div>
+                </div>
+<!-- Course 06 END-->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div align="center">
+                            <button type="button" id="next_btn" class="btn btn-outline-success btn-block">Next</button>
+                            <button type="button" id="calculate_btn" class="btn btn-outline-danger btn-block">Calculate
+                                CGPA</button>
+                            <button type="button" id="again_btn" class="btn btn-outline-warning btn-block">Calculate
+                                Again</button>
+                        </div>
+                    </div>
+                </div>
+
+                
+               
+            </div>
+        </div>
+    </div>
+
+    <h1>CGPA <span id="final_cg"></span></h1>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+ <!--<script src="js/calculate.js"></script>-->   
+    <script src="script.js"></script>
+</body>
+
+</html>
